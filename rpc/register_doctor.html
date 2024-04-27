@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spiritual Rest Stop - Doctor</title>
+    <link rel="stylesheet" href="css/register_doctor.css">
+    <script type="module" src="js/register_doctor.js" defer></script>
+</head>
+<body>
+
+<div class="navigation">
+    <a href="start.html"><img src="images/arrow-left.png" alt="Back"></a>
+</div>
+
+
+<div class="left-section">
+    <img src="images/shape.png" alt="Decorative Shape" class="decorative-shape">
+    <img src="images/smile.png" alt="Smiley" class="smiley-face">
+    <h1>Spiritual Rest Stop</h1>
+</div>
+
+<div class="right-section">
+    <div class="color-picker">
+        <label for="colorPicker">
+            <input type="color" id="colorPicker" name="color" value="#000000">
+        </label>
+    </div>
+    <form id="doctorForm">
+
+        <div class="input-group">
+            <p>Please choose a color to represent yourself</p>
+            <input type="doctorName" id="doctorName" required placeholder="Enter your username">
+            <span class="input-hint" id="doctorHint">Username already exists</span>
+        </div>
+        <div class="input-group">
+            <input type="email" id="email" required placeholder="Enter email address">
+            <span class="input-hint" id="emailHint">Invalid input.</span>
+        </div>
+        <div class="input-group">
+            <input type="institute" id="institute" required placeholder="Enter your institute">
+        </div>
+        <div class="input-group">
+            <input type="password" id="password" required placeholder="Enter Password">
+            <span class="input-hint" id="passwordHint">8-16 characters with both letter and number.</span>
+        </div>
+        <div class="input-group">
+            <input type="password_confirm" id="password_confirm" required placeholder="Confirm Password">
+            <span class="input-hint" id="passwordConfirmHint">Two passwords are inconsistent!</span>
+        </div>
+
+        <button type="submit" class="button" id="registerButton">Register</button>
+    </form>
+</div>
+</body>
+</html>

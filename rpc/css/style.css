@@ -1,0 +1,341 @@
+body {
+    font-family: "Montserrat", sans-serif;
+    background-color: #E0EEEC;
+
+}
+header {
+    display: flex; /* 使用 flexbox 布局 */
+    align-items: center; /* 垂直居中所有子元素 */
+    justify-content: space-between; /* 使子元素分散对齐 */
+    padding: 10px;
+    border-bottom: 1.5px solid #0A8992;
+}
+
+#title {
+    font-size: 40px;
+    font-family: "Nanum Pen Script";
+    font-weight: normal;
+    color: #0A8992;
+    margin: 0;
+    margin-left: 20px;
+}
+.nav-container {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+.nav-link {
+    text-decoration: none;
+    color: #0A8992;
+    margin: 0 50px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.mood-board {
+    border-radius: 10px;
+    margin: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#logout-button {
+    font-family: "Montserrat", sans-serif;
+    color: #0A8992;
+    width: 100px;
+    height: 40px;
+    border-radius: 60px;
+    background-color: transparent; /* 设置背景透明 */
+    border: 1px solid #0A8992; /* 设置边框颜色和宽度 */
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: row; /* 保持子元素水平排列 */
+    align-items: flex-start;
+    justify-content: center;
+    padding: 20px 0;
+    gap: 20px;
+}
+
+.left-panel {
+    /* 给左侧面板一个最大宽度，避免它在大屏幕上过于宽阔 */
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.input-tag-container {
+    max-width: 100%;
+    height: 55vh; /* 或您希望的具体高度值 */
+    background-color: #f8fbfb;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tag-selector {
+    max-width: 100%;
+    height: 30vh; /* 或您希望的具体高度值 */
+    background-color: #f8fbfb;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#post-content {
+    width: calc(100% - 20px);
+    height: 30vh;
+    display: block;
+    margin-top: 20px;
+    padding: 10px;
+    border: none;
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+    background-color: #f8fbfb;
+    z-index: 2;}
+
+#send-button {
+    padding: 10px 20px; /* 或其他你希望的尺寸 */
+    font-size: 16px; /* 你可以调整字体大小 */
+    color: white; /* 按钮文字颜色 */
+    background-color: #0A8992; /* 按钮背景颜色 */
+    border: none; /* 没有边框 */
+    border-radius: 5px; /* 圆角的大小 */
+    cursor: pointer; /* 鼠标悬停时变成手指图标 */
+    margin-bottom: 20px; /* 在按钮和下方内容之间添加一些空间 */
+    outline: none; /* 移除点击时的轮廓 */
+    transition: background-color 0.3s ease;
+    position: relative;
+
+}
+#send-button::after {
+    content: ''; /* 伪元素需要content属性 */
+    position: absolute; /* 绝对定位相对于按钮 */
+    bottom: -15px; /* 将线位置设置在按钮下方5px处 */
+    left: 0; /* 从按钮左边缘开始 */
+    right: 0; /* 伸展到按钮右边缘 */
+    height: 1.5px; /* 线的粗细 */
+    background-color: #0A8992; /* 线的颜色 */
+    border-radius: 2px; /* 如果需要线条两端为圆角 */
+}
+
+#send-button:hover {
+    background-color: #087880; /* 鼠标悬停时按钮的背景颜色变深 */
+}
+
+.tag-selector h2 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 24px;
+    color: #0A8992;
+    text-align: left;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1.5px solid #0A8992; /* 添加淡蓝色横线 */
+    padding-bottom: 10px;
+
+}
+.tags-selection {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: start;
+    padding: 0px;
+}
+.tag {
+    border: none;
+    font-family: "Montserrat", sans-serif;
+    background-color: #E0EEEC;
+    border-radius: 20px;
+    padding: 10px 15px;
+    margin: 0 10px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+.tag-output {
+    display: none;
+    border: none;
+    font-family: "Montserrat", sans-serif;
+    background-color: #E0EEEC; /* Same background color as .tag */
+    border-radius: 20px; /* Same border radius as .tag */
+    padding: 10px 15px; /* Same padding as .tag */
+    margin-top: 10px; /* This can stay unique for tag-output */
+    font-size: 15px; /* Same font size as .tag */
+
+    align-items: center;
+    justify-content: center; /* Center the text */
+    cursor: default; /* Change the cursor to default since it's not a button */
+}
+.new-label {
+    border: none;
+    font-family: "Montserrat", sans-serif;
+    background-color: #E0EEEC;
+    border-radius: 20px;
+    padding: 10px 15px;
+    margin: 0 10px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+#new-label-display {
+    display: block; /* Ensure it is visible */
+    border: 1px solid #ccc; /* Example border */
+    padding: 10px; /* Example padding */
+    margin-top: 10px; /* Spacing above the div */
+    min-height: 20px;
+}
+
+
+.tag:hover {
+    background-color: #CCE4E4;
+}
+
+.new-label:hover {
+    background-color: #CCE4E4;
+}
+
+#send-button {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #0A8992;
+    color: white;
+    cursor: pointer;
+}
+
+/* Remove or adjust existing .post styles as necessary */
+.post-display {
+    flex-grow: 1;
+    max-height: calc(100vh - 140px);
+    flex-direction: column;
+    overflow-y : auto;
+    align-items: center; /* Center children horizontally */
+    justify-content: flex-start; /* Align children to the start of the container */
+    padding: 20px 0;
+}
+/* 针对使用Webkit内核浏览器的样式 */
+.post-display::-webkit-scrollbar {
+    display: none;
+}
+/* 针对Firefox的样式 */
+.post-display {
+    scrollbar-width: none;
+}
+/* 为了确保在所有浏览器中内容都可以滚动，即使滚动条被隐藏 */
+.post-display {
+    -ms-overflow-style: none; /* IE和Edge浏览器隐藏滚动条 */
+}
+
+
+.post {
+    width:560px ; /* or a specific width */
+    background-color: #f8fbfb;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Additional styles */
+}
+
+
+.search-and-reading {
+    display: flex;
+    flex-direction: column;
+    width: calc(30vw - 40px); /* 根据左侧内容的宽度调整 */
+    height: calc(100vh - 100px); /* 调整以适应头部和页面的上下留白 */
+}
+
+#search-box {
+    width: 95%;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    margin-bottom: 10px; /* 搜索框与文章列表之间的间隔 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+#search-button {
+    width: 98%;
+    padding: 10px;
+    border-radius: 15px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    background-color: #52acb2;
+    color: white;
+    cursor: pointer;
+}
+
+#search-button:hover {
+    background-color: #087880;
+}
+
+.articles-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    gap: 20px;
+    overflow-y : auto; /* 启用垂直滚动条 */
+    padding-top: 10px;
+    padding-right: 20px;
+
+}
+
+/* 针对使用Webkit内核浏览器的样式 */
+.articles-container::-webkit-scrollbar {
+    display: none;
+}
+/* 针对Firefox的样式 */
+.articles-container {
+    scrollbar-width: none;
+}
+/* 为了确保在所有浏览器中内容都可以滚动，即使滚动条被隐藏 */
+.articles-container {
+    -ms-overflow-style: none; /* IE和Edge浏览器隐藏滚动条 */
+}
+
+
+.article-card {
+    display: flex;
+    flex-direction: column; /* 如果希望图像在左边，请改为row */
+    background-color: #fff;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease; /* 为点击效果添加动画 */
+}
+
+.article-card:hover {
+    transform: translateY(-5px); /* 鼠标悬停时上移 */
+}
+
+.article-image {
+    width: 100%;
+    height: 200px; /* 根据需要调整 */
+    background-color: #eee; /* 用于没有图片时的占位符背景 */
+    background-size: contain;
+    background-position: center;
+}
+
+.article-content {
+    padding: 15px;
+}
+
+.article-content h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+.article-content p {
+    color: #666;
+    font-size: 14px;
+}

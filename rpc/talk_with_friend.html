@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Spiritual Rest Stop</title>
+    <link rel="stylesheet" href="css/talk_with_friend.css">
+    <script type="module" src="js/talk_with_friend.js" defer></script>
+</head>
+<body>
+<header>
+    <h1 id="title">Spiritual Rest Stop</h1>
+    <div class="nav-container">
+        <nav>
+            <a href="homepageindex.html" class="nav-link" id="mood-bazaar">Mood Bazaar</a>
+            <a href="#" class="nav-link" id="chat">Chat</a>
+            <a href="consultDoctor.html" class="nav-link" id="reservations">Consult Doctors</a>
+        </nav>
+    </div>
+    <button id="logout-button" onclick="location.href='start.html';">Log out</button>
+</header>
+
+<div class="main-content">
+    <div class="left-panel">
+        <div id="user-list-container" class="user-container">
+            <input type="text" id="friends-search" placeholder="Search here" class="friends-search"/>
+            <button id="search-button" class="search-button">Add new friend</button>
+            <div class="button-group">
+                <button id="friends" class="choose-button">Friends</button>
+                <button id="groups" class="choose-button">Groups</button>
+            </div>
+            <div id="friends-list" class="list">
+                <!-- user will be listed here -->
+            </div>
+        </div>
+    </div>
+    <div id="add-friend-popup" class="popup" style="display:none;">
+        <div class="popup-content">
+            <span class="close-button">&times;</span>
+            <input type="text" id="popup-user-search" placeholder="Enter username" class="popup-user-search"/>
+            <div id="users-list" class="list"></div>
+            <!-- Form or content to add new friend goes here -->
+        </div>
+    </div>
+
+    <!-- ... other content ... -->
+</div>
+</body>
+</html>

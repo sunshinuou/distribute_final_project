@@ -1,0 +1,224 @@
+body {
+    font-family: "Montserrat", sans-serif;
+    background-color: #E0EEEC;
+
+}
+header {
+    display: flex; /* 使用 flexbox 布局 */
+    align-items: center; /* 垂直居中所有子元素 */
+    justify-content: space-between; /* 使子元素分散对齐 */
+    padding: 10px;
+    border-bottom: 1.5px solid #0A8992;
+}
+
+#title {
+    font-size: 40px;
+    font-family: "Nanum Pen Script";
+    font-weight: normal;
+    color: #0A8992;
+    margin: 0;
+    margin-left: 20px;
+}
+.nav-container {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+.nav-link {
+    text-decoration: none;
+    color: #0A8992;
+    margin: 0 50px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.mood-board {
+    border-radius: 10px;
+    margin: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#logout-button {
+    font-family: "Montserrat", sans-serif;
+    color: #0A8992;
+    width: 100px;
+    height: 40px;
+    border-radius: 60px;
+    background-color: transparent; /* 设置背景透明 */
+    border: 1px solid #0A8992; /* 设置边框颜色和宽度 */
+    cursor: pointer;
+    margin-right: 20px;
+}
+.left-panel {
+    width: 406px; /* As per the dimensions provided */
+    height: 710px; /* As per the dimensions provided */
+    overflow-y: auto; /* Enables scrolling within the left panel */
+    overflow-x: hidden; /* Hides horizontal scrollbar */
+    position: fixed; /* Fixes the position of the left panel */
+    left: 22px; /* X position */
+    top: 85px; /* Y position */
+    background-color: #FFFFFF; /* Set background color to white */
+    border-radius: 18px; /* Rounded corners as per your images */
+    padding-left: 12px;
+}
+
+
+#friends-search {
+    width: 366px;
+    height: 37px;
+    margin: 15px 0;
+    background-color: #DBE8E6;
+    border: none;
+    padding: 0 15px;
+    border-radius: 18px;
+    justify-content: center;
+}
+
+.friends-list {
+    /* Additional styling for the search results container if needed */
+}
+
+.friend-item {
+    width: 390px; /* Width of each doctor item */
+    height: 73px; /* Height of each doctor item */
+    margin-bottom: 10px; /* Space between items */
+    display: flex;
+    align-items: center; /* Center items vertically */
+    padding: 0 20px; /* Padding inside each item */
+    box-sizing: border-box;
+    border-bottom: 1px solid #B3B3B3; /* Color of bottom edge of each doctor item */
+}
+
+.friend-item-circle {
+    width: 50px; /* Adjust the size of the circle */
+    height: 50px; /* Adjust the size of the circle */
+    border-radius: 50%; /* Makes the div a circle */
+    margin-right: 20px; /* Space between circle and text */
+}
+
+
+.search-button {
+    width: 390px; /* Same width as the search input for alignment */
+    padding: 10px 0; /* Padding for better touch area */
+    background-color: #0A8992; /* Matching the theme color */
+    color: white; /* Text color for visibility */
+    border-radius: 18px; /* Rounded corners like the search bar */
+    border: none; /* No border for a cleaner look */
+    cursor: pointer; /* Cursor changes to pointer to indicate clickability */
+    font-family: "Montserrat", sans-serif; /* Font consistency */
+    font-size: 16px; /* Suitable font size for readability */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.search-button:hover {
+    background-color: #087880; /* Darker shade on hover for interaction feedback */
+}
+
+.button-group {
+    display: flex;
+    justify-content: center; /* Center buttons horizontally */
+    gap: 10px; /* Space between buttons */
+    margin-top: 20px;
+    margin-right: 10px; /* Margin above and below the button group */
+}
+
+.choose-button {
+    flex: 1; /* Each button takes up equal space */
+    padding: 10px 0; /* Padding for better touch area */
+    background-color: #E0EEEC; /* Light background color */
+    color: #0A8992; /* Theme color for text */
+    border-radius: 18px; /* Rounded corners */
+    border: none; /* No border for a cleaner look */
+    cursor: pointer; /* Cursor changes to pointer to indicate clickability */
+    font-family: "Montserrat", sans-serif; /* Font consistency */
+    font-size: 16px; /* Suitable font size for readability */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+.choose-button:hover {
+    background-color: #CCE4E4; /* Slightly darker shade on hover */
+}
+
+.popup {
+    position: fixed;
+    width: 812px; /* double the width of the left panel */
+    height: 710px;
+    top: 85px;
+    left: 530px; /* adjust based on the width of the left panel */
+    background-color: #FFFFFF;
+    border-radius: 18px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 10; /* Ensures the popup is above other elements */
+}
+
+.popup-content {
+    padding: 20px;
+    position: relative;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    color: #0A8992;
+}
+
+.popup-user-search {
+    width: calc(100% - 70px); /* Adjust width to fit popup, considering padding */
+    height: 37px;
+    margin: 25px;
+    padding: 0 15px;
+    border-radius: 18px;
+    border: none;
+    background-color: #DBE8E6;
+}
+
+
+.users-list {
+    /* Additional styling for the search results container if needed */
+}
+
+
+.user-item-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 20px;
+    /* The background color will be set dynamically based on user's color preference */
+}
+
+.user-item {
+    width: calc(100% - 40px);  /* Width of each doctor item */
+    height: 73px; /* Height of each doctor item */
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-bottom: 10px; /* Space between items */
+    display: flex;
+    align-items: center; /* Center items vertically */
+    padding: 0 20px; /* Padding inside each item */
+    box-sizing: border-box;
+    border-bottom: 1px solid #B3B3B3; /* Color of bottom edge of each doctor item */
+}
+
+
+.add-friend-button {
+    padding: 8px 16px;
+    background-color: #0A8992;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    margin-left: auto; // This pushes the button to the right
+transition: background-color 0.3s ease;
+}
+
+.add-friend-button:hover {
+    background-color: #087880;
+}

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Spiritual Rest Stop</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+    <h1 id="title">Spiritual Rest Stop</h1>
+    <div class="nav-container">
+        <nav>
+            <a href="#" class="nav-link" id="mood-bazaar">Mood Bazaar</a>
+            <a href="talk_with_friend.html" class="nav-link" id="chat">Chat</a>
+            <a href="consultDoctor.html" class="nav-link" id="reservations">Consult Doctors</a>
+        </nav>
+    </div>
+    <button id="logout-button" onclick="location.href='start.html';">Log out</button>
+</header>
+
+<div class="main-content">
+    <!-- 所有需要 flex 布局的部分放在这里 -->
+    <div class="left-panel">
+        <div class="input-tag-container">
+            <textarea id="post-content" placeholder="What's your feeling?"></textarea>
+            <button id="send-button">Send</button>
+            <div id="tag-output" class="tag-output">
+                <!-- This element is where the new label will be displayed -->
+                <div id="new-label-display">New label</div>
+            </div>
+        </div>
+        <div class="tag-selector">
+            <h2>Tags</h2>
+            <div class="tags-selection">
+                <button class="tag">+ Happy</button>
+                <button class="tag">+ Angry</button>
+                <button class="tag">+ Sad</button>
+                <button class="tag">+ Depressed</button>
+                <button class="tag">+ Anxious</button>
+                <button class="tag">+ Nervous</button>
+                <button id="new-label-button" class="tag">+ New label</button>
+            </div>
+        </div>
+    </div>
+    <div class="post-display">
+        <article class="post">
+            <h3>Choose your mood</h3>
+            <p>Write down what you're feeling right now</p>
+        </article>
+    </div>
+    <div class="search-and-reading">
+        <input type="text" id="search-box" placeholder="Search Something in Wikipedia...">
+        <button id="search-button">Search</button>
+        <div class="articles-container">
+            <div class="article-card" onclick="location.href='https://www.who.int/news-room/fact-sheets/detail/depression';">
+                <div class="article-image" style="background-image: url('images/mental.png');"></div>
+                <div class="article-content">
+                    <h3>Into the Depression</h3>
+                    <p>Depression is a common mental disorder. </p>
+                    <p>Globally, an estimated 5% of adults suffer from depression..... </p>
+                </div>
+            </div>
+            <div class="article-card" onclick="location.href='https://www.ny.gov/teen-dating-violence-awareness-and-prevention/what-does-healthy-relationship-look';">
+                <div class="article-image"style="background-image: url('images/relationship.png')"></div>
+                <div class="article-content">
+                    <h3>What Does a Healthy Relationship Look Like?</h3>
+                    <p>Healthy relationships involve honesty, trust, respect and open communication between partners and they take effort and compromise from both people. ... </p>
+                </div>
+            </div>
+            <div class="article-card" onclick="location.href='https://www.who.int/news-room/fact-sheets/detail/anxiety-disorders';">
+                <div class="article-image"style="background-image: url('images/ongo.png')"></div>
+                <div class="article-content">
+                    <h3>Into the Depression Anxiety disorders</h3>
+                    <p>Anxiety disorders are the world’s most common mental disorders, affecting 301 million people in 2019.... </p>
+                </div>
+            </div>
+            <div class="article-card" onclick="location.href='https://www.mind.org.uk/information-support/tips-for-everyday-living/relaxation/relaxation-tips/';">
+                <div class="article-image"style="background-image: url('images/discord-tips-and-tricks.jpg')"></div>
+                <div class="article-content">
+                    <h3>Relaxation</h3>
+                    <p>Tips and exercises to help you relax.... </p>
+                </div>
+            </div>
+            <div class="article-card" onclick="location.href='https://www.verywellmind.com/using-rationalization-as-a-defense-mechanism-7484497';">
+                <div class="article-image"style="background-image: url('images/filechoose.png')"></div>
+                <div class="article-content">
+                    <h3>Using Rationalization as a Defense Mechanism</h3>
+                    <p>Rationalization involves justifying behaviors, thoughts, or feelings using logical explanations.... </p>
+                </div>
+            </div>
+            <div class="article-card" onclick="location.href='https://www.businessnewsdaily.com/5244-improve-work-life-balance-today.html';">
+                <div class="article-image"style="background-image: url('images/RPA Developer.jpg')"></div>
+                <div class="article-content">
+                    <h3>How to Improve Your Work-Life Balance Today</h3>
+                    <p>Often, work takes precedence over everything else in our lives. Our desire to succeed professionally can push us to set aside our own well-being. ... </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="module"  src="js/homepage.js"></script>
+</body>
+</html>

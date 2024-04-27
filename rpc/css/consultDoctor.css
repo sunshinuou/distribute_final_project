@@ -1,0 +1,111 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #E0EEEC;
+}
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Set the height to the viewport height */
+    overflow: hidden; /* Disable scrolling on the entire page */
+}
+
+header {
+    display: flex; /* 使用 flexbox 布局 */
+    align-items: center; /* 垂直居中所有子元素 */
+    justify-content: space-between; /* 使子元素分散对齐 */
+    padding: 10px;
+    border-bottom: 1.5px solid #0A8992;
+}
+
+#title {
+    font-size: 40px;
+    font-family: "Nanum Pen Script";
+    font-weight: normal;
+    color: #0A8992;
+    margin: 0;
+    margin-left: 20px;
+}
+.nav-container {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+.nav-link {
+    text-decoration: none;
+    color: #0A8992;
+    margin: 0 50px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.mood-board {
+    border-radius: 10px;
+    margin: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#logout-button {
+    font-family: "Montserrat", sans-serif;
+    color: #0A8992;
+    width: 100px;
+    height: 40px;
+    border-radius: 60px;
+    background-color: transparent; /* 设置背景透明 */
+    border: 1px solid #0A8992; /* 设置边框颜色和宽度 */
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+
+
+/* Left Panel styles */
+.left-panel {
+    width: 406px; /* As per the dimensions provided */
+    height: 710px; /* As per the dimensions provided */
+    overflow-y: auto; /* Enables scrolling within the left panel */
+    overflow-x: hidden; /* Hides horizontal scrollbar */
+    position: fixed; /* Fixes the position of the left panel */
+    left: 22px; /* X position */
+    top: 85px; /* Y position */
+    background-color: #FFFFFF; /* Set background color to white */
+    border-radius: 18px; /* Rounded corners as per your images */
+    padding-left: 12px;
+}
+
+/* Doctor item styles */
+.doctor-item {
+    width: 390px; /* Width of each doctor item */
+    height: 73px; /* Height of each doctor item */
+    margin-bottom: 10px; /* Space between items */
+    display: flex;
+    align-items: center; /* Center items vertically */
+    padding: 0 20px; /* Padding inside each item */
+    box-sizing: border-box;
+    border-bottom: 1px solid #B3B3B3; /* Color of bottom edge of each doctor item */
+}
+
+.doctor-item-circle {
+    width: 50px; /* Adjust the size of the circle */
+    height: 50px; /* Adjust the size of the circle */
+    border-radius: 50%; /* Makes the div a circle */
+    margin-right: 20px; /* Space between circle and text */
+}
+
+/* Search bar styles */
+#doctor-search {
+    width: 366px; /* As per the dimensions provided */
+    height: 37px; /* As per the dimensions provided */
+    margin: 15px 0; /* Space around the search bar */
+    background-color: #DBE8E6; /* Background color of search bar */
+    border: none; /* Remove border */
+    padding: 0 15px; /* Padding inside the search bar */
+    border-radius: 18px; /* Rounded corners as per your images */
+    justify-content: center;
+}
+
+
+/* Make sure to include other styles from your 'consultDoctor.css' to keep the design consistent */

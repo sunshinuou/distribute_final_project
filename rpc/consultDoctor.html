@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Spiritual Rest Stop</title>
+    <link rel="stylesheet" href="css/consultDoctor.css">
+</head>
+<body>
+<header>
+    <h1 id="title">Spiritual Rest Stop</h1>
+    <div class="nav-container">
+        <nav>
+            <a href="homepageindex.html" class="nav-link" id="mood-bazaar">Mood Bazaar</a>
+            <a href="talk_with_friend.html" class="nav-link" id="chat">Chat</a>
+            <a href="#" class="nav-link" id="reservations">Consult Doctors</a>
+        </nav>
+    </div>
+    <button id="logout-button" onclick="location.href='start.html';">Log out</button>
+</header>
+
+<div class="main-content">
+    <div class="left-panel">
+        <div id="doctors-list-container" class="doctors-container">
+            <input type="text" id="doctor-search" placeholder="Search here" class="doctor-search"/>
+            <div id="doctors-list" class="list">
+                <!-- Doctors will be listed here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- ... other content ... -->
+</div>
+
+
+
+
+<script type="module"  src="js/consultDoctor.js"></script>
+</body>
+</html>

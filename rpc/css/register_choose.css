@@ -1,0 +1,47 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #DBE8E6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+
+h1 {
+    font-size: 64px;
+    color: #0A8992;
+    font-family: "Nanum Pen Script";
+    font-weight: normal;
+    margin-bottom: 70px; /* To remove any default margin */
+}
+
+
+.button {
+    background-color: #3FC0C0;
+    border: none;
+    color: white;
+    padding: 18px 0;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    width: 283px;
+    border-radius: 20px;
+
+}
+
+.user {
+    margin-bottom: 70px;
+}
+
+#decorative-shape {
+    position: absolute;
+    top: 0;
+    left: 0;
+}

@@ -1,0 +1,112 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #DBE8E6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+}
+
+
+.right-section {
+    margin: 20px;
+}
+
+.navigation {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 2; /* Higher z-index means this will be on top of other positioned elements */
+}
+
+.decorative-shape {
+    position: absolute;
+    top: 0; /* Adjusted to be at the very top */
+    left: 0; /* Adjusted to be at the very left */
+    z-index: 1; /* Lower z-index means this will be below the navigation */
+    transform: none; /* Since we want it in the top left corner, no need to translate */
+}
+
+h2 {
+    font-family: "Nanum Pen Script", cursive;
+    font-weight: normal;
+    font-size: 64px;
+    margin-top: -20px;
+    color: #0A8992;
+    text-align: center;
+}
+
+h1 {
+    font-family: "Nanum Pen Script", cursive;
+    font-weight: normal;
+    font-size: 64px;
+    text-align: center;
+    color: #0A8992;
+    margin-top: 0;
+    margin-left: -25%; /* You may need to adjust this percentage */
+    display: inline-block; /* Adjust display to allow for margin manipulation */
+    position: relative; /* Relative positioning for fine-tuning */
+    left: 50%; /* Shift the element to half of its parent width */
+    transform: translateX(-50%); /* Center the element with its own width considered */
+}
+p {
+    color: #0A8992;
+}
+
+
+.smiley-face {
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+    margin-left: 5%;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+input[type="username"],input[type="email"], input[type="password"], input[type="password_confirm"] {
+    width: 375px;
+    padding: 15px;
+    margin: 10px -10px;
+    border: none;
+    border-radius: 100px;
+    font-size: 16px;
+}
+
+.input-hint {
+    display: none;
+    color: #F17C7C;
+    font-size: 14px;
+}
+
+#userForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* This will center the button */
+}
+
+.button {
+    background-color: #3FC0C0;
+    border: none;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    display: block;
+    width: 283px;
+    border-radius: 100px;
+    opacity: 0.37;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.navigation {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
